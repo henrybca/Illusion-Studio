@@ -1,195 +1,194 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>印刷設計工作室｜名片・傳單・包裝盒</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10101a">
+<title>藝如聲工作室 Illusion Studio｜平面設計・品牌視覺・印刷設計</title>
 <style>
 :root{
-  color-scheme:dark;
-  --bg:#090c18;--panel:#11172b;--line:#252f52;--text:#e9edfb;--mute:#8e99be;
-  --c:#2fd4f0;--m:#ff4fa3;--y:#ffd84a;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{height:100%;scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 "Noto Sans TC",system-ui,sans-serif}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:
- radial-gradient(ellipse 60% 40% at 15% 0%,rgba(47,212,240,.16),transparent),
- radial-gradient(ellipse 50% 40% at 90% 10%,rgba(255,79,163,.14),transparent),
- linear-gradient(var(--line) 1px,transparent 1px) 0 0/56px 56px,
- linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 56px;opacity:.9}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--c);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Space Grotesk","Noto Sans TC",sans-serif;letter-spacing:-.02em;line-height:1.15;margin:0}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo{font:700 19px "Space Grotesk","Noto Sans TC",sans-serif;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-.logo img{width:500px !important;max-width:100% !important;height:auto !important;max-height:none !important}
-.logo .company-name{font-size:22px;font-weight:700;color:var(--text);letter-spacing:2px;margin:0;white-space:nowrap}
-@media(max-width:480px){.logo img{width:300px;max-height:170px}.logo .company-name{font-size:16px;letter-spacing:1px}}
-.dots{display:flex}.dots i{width:12px;height:12px;border-radius:50%;margin-right:-4px;mix-blend-mode:screen}
-.dots i:nth-child(1){background:var(--c)}.dots i:nth-child(2){background:var(--m)}.dots i:nth-child(3){background:var(--y)}
-.btn{display:inline-block;background:var(--text);color:#0a0d1a;font-weight:700;text-decoration:none;padding:13px 26px;border-radius:8px;border:0;cursor:pointer;font-size:16px;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:-4px 4px 0 var(--c),4px -4px 0 var(--m)}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-.btn.ghost:hover{border-color:var(--c);box-shadow:none}
-nav .btn{padding:8px 18px;font-size:14px}
-.hero{position:relative;padding:72px 0 96px}
-.hero h1{font-size:clamp(42px,8.5vw,96px);font-weight:700;max-width:11ch}
-.hero .lead{font-size:clamp(17px,2.2vw,21px);color:var(--mute);max-width:34em;margin:24px 0 36px}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.reg{position:absolute;right:0;top:56px;width:clamp(120px,24vw,260px);aspect-ratio:1;border:1px dashed var(--line);display:grid;place-items:center}
-.reg::before,.reg::after{content:"";position:absolute;background:var(--mute);opacity:.6}
-.reg::before{width:calc(100% + 28px);height:1px}.reg::after{height:calc(100% + 28px);width:1px}
-.reg b{width:46%;aspect-ratio:1;border-radius:50%;border:1px solid var(--mute);display:block;position:relative;background:
- radial-gradient(circle at 35% 40%,var(--c) 0 28%,transparent 29%),radial-gradient(circle at 65% 40%,var(--m) 0 28%,transparent 29%),radial-gradient(circle at 50% 68%,var(--y) 0 28%,transparent 29%);background-blend-mode:screen}
-@media(max-width:700px){.reg{display:none}}
-section{padding:72px 0;border-top:1px solid var(--line)}
-section h2{font-size:clamp(28px,4.5vw,42px);margin-bottom:12px}
-.sub{color:var(--mute);margin:0 0 40px;max-width:40em}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;display:flex;flex-direction:column;transition:border-color .2s}
-.card:hover{border-color:var(--c)}
-.stage{height:132px;display:grid;place-items:center;margin-bottom:22px;border-radius:8px;background:repeating-linear-gradient(45deg,#0d1224 0 8px,#0b1020 8px 16px)}
-.service-photo{width:100%;height:190px;object-fit:cover;display:block;border-radius:8px;margin-bottom:22px;background:#0d1224;border:1px solid var(--line)}
-@media(max-width:700px){.service-photo{height:210px}}
-
-.mock{background:linear-gradient(135deg,var(--c),var(--m));border-radius:4px;box-shadow:0 10px 28px rgba(0,0,0,.5)}
-.m-card{width:140px;height:80px;transform:rotate(-6deg)}
-.m-flyer{width:76px;height:108px;transform:rotate(5deg);background:linear-gradient(160deg,var(--m),var(--y))}
-.m-box{width:96px;height:80px;background:linear-gradient(135deg,var(--y),var(--c));transform:skewY(-8deg) rotate(2deg);border-radius:2px;position:relative}
-.m-box::after{content:"";position:absolute;inset:-12px 8px auto 8px;height:12px;background:var(--text);opacity:.25;transform:skewX(-30deg)}
-.m-label{width:92px;height:92px;border-radius:50%;background:linear-gradient(135deg,var(--y),var(--m))}
-.m-poster{width:84px;height:116px;background:linear-gradient(200deg,var(--c),var(--y));transform:rotate(-3deg)}
-.m-book{width:88px;height:112px;background:linear-gradient(120deg,var(--m),var(--c));border-radius:2px 8px 8px 2px;border-left:8px solid rgba(0,0,0,.35)}
-.card h3{font-size:21px;margin-bottom:6px}
-.card p{margin:0 0 14px;color:var(--mute);font-size:15px}
-.spec{margin:auto 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:14px;color:var(--text);display:flex;justify-content:space-between;gap:12px}
-.spec span{color:var(--mute)}
-.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.steps li{counter-increment:s;border-top:2px solid var(--line);padding-top:16px}
-.steps li:nth-child(1){border-color:var(--c)}.steps li:nth-child(2){border-color:var(--m)}.steps li:nth-child(3){border-color:var(--y)}.steps li:nth-child(4){border-color:var(--text)}
-.steps h3{font-size:18px;margin-bottom:6px}
-.steps h3::before{content:counter(s) ". "}
-.steps p{margin:0;color:var(--mute);font-size:15px}
-.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.work{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);overflow:hidden;background:var(--panel);position:relative;display:block;padding:0;transition:border-color .2s,transform .2s}
-.work:hover{border-color:var(--c);transform:translateY(-3px)}
-.work img{width:100%;height:100%;display:block;object-fit:cover}
-.work .work-caption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;font-size:14px;font-weight:500}
-.work img[src=""],.work img:not([src]){display:none}
-
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font-weight:500;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--m);font-size:22px;line-height:1;transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--mute);margin:12px 0 0;max-width:40em}
-.cta{text-align:center}.cta h2{margin-bottom:12px}.cta .sub{margin:0 auto 28px}
-.cta .btns{justify-content:center}
-footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:14px;text-align:center}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  --bg:#0d0d16;--surface:#171722;--surface2:#20202d;--text:#f7f4f0;
+  --muted:#b7b2c2;--gold:#d8bd65;--purple:#a77be7;--line:rgba(255,255,255,.12);
+  --max:1180px;--radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC",system-ui,-apple-system,sans-serif;line-height:1.75}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(13,13,22,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;min-width:0;width:245px;min-height:76px}
+.brand img{width:100%;height:auto;max-height:76px;object-fit:contain}
+.navlinks{display:flex;align-items:center;gap:26px;color:#ded9e8;font-size:14px}
+.navlinks a:hover{color:var(--gold)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;background:linear-gradient(110deg,#e4cd7b,#b78b50);color:#17131a;font-weight:800;transition:.2s}
+.nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.menu-toggle{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:20px}
+.hero{position:relative;overflow:hidden;padding:100px 0 105px;background:
+ radial-gradient(ellipse at 15% 75%,rgba(167,123,231,.22),transparent 36%),
+ radial-gradient(ellipse at 82% 15%,rgba(216,189,101,.18),transparent 32%),
+ linear-gradient(135deg,#10101b,#171421 55%,#11111a)}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(216,189,101,.18);border-radius:50%;right:-160px;bottom:-300px;box-shadow:0 0 0 45px rgba(216,189,101,.025),0 0 0 90px rgba(216,189,101,.02)}
+.hero-content{position:relative;z-index:1;max-width:780px}
+.eyebrow{color:var(--gold);letter-spacing:.2em;font-size:13px;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.16;letter-spacing:-.04em;margin:18px 0 22px}
+h1 span{background:linear-gradient(100deg,#f3dc8a,#c59b61 48%,#bd9be8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;color:var(--muted);font-size:18px;margin:0 0 32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-outline{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:10px 20px;color:#f5f1f8}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-note{margin-top:54px;color:#9b95a9;font-size:12px;letter-spacing:.16em}
+section{padding:88px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.18em;font-weight:800}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.2;margin:8px 0 0}
+.section-head p{max-width:440px;color:var(--muted);margin:0}
+.services{background:#11111b}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s}
+.service-card:hover{transform:translateY(-5px);border-color:rgba(216,189,101,.55)}
+.photo{height:220px;background:linear-gradient(135deg,#29243a,#171723);overflow:hidden;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.service-card:hover .photo img{transform:scale(1.05)}
+.photo-placeholder{height:100%;display:grid;place-items:center;color:#aaa0b9;font-size:13px;letter-spacing:.1em}
+.card-body{padding:23px}
+.card-body h3{font-size:20px;margin:0 0 8px}
+.card-body p{color:var(--muted);font-size:14px;margin:0}
+.portfolio{background:radial-gradient(ellipse at 90% 10%,rgba(167,123,231,.1),transparent 35%),var(--bg)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.work{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);aspect-ratio:4/3;cursor:pointer}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.work:hover img{transform:scale(1.045)}
+.work:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.work-caption{position:absolute;z-index:1;left:22px;bottom:18px}
+.work-caption b{display:block;font-size:19px}
+.work-caption span{font-size:12px;color:#e2dce9}
+.process{background:#15141f}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border-top:1px solid rgba(216,189,101,.55);padding:20px 8px 0 0}
+.step-num{color:var(--gold);font:700 13px ui-monospace,monospace;letter-spacing:.15em}
+.step h3{font-size:19px;margin:10px 0 6px}
+.step p{color:var(--muted);font-size:14px;margin:0}
+.about-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+.about-copy p{color:var(--muted)}
+.contact{background:linear-gradient(120deg,#211b2c,#17141f 55%,#242016);text-align:center}
+.contact h2{margin:10px auto 14px}
+.contact p{color:var(--muted);max-width:600px;margin:0 auto 28px}
+footer{padding:28px 0;color:#898396;font-size:13px;border-top:1px solid var(--line)}
+.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:50;display:none;align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,95vw);max-height:88vh;object-fit:contain}
+.lightbox button{position:absolute;right:24px;top:20px;background:none;border:0;color:white;font-size:36px;cursor:pointer}
+@media(max-width:850px){
+ .navlinks{gap:14px}.brand{width:205px}
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr)}
+ .about-grid{gap:30px}
+}
+@media(max-width:620px){
+ .container{width:min(var(--max),calc(100% - 32px))}
+ .nav{min-height:76px}.brand{width:190px;min-height:64px}
+ .menu-toggle{display:block}
+ .navlinks{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 22px 22px;background:#12121d;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}
+ .navlinks.show{display:flex}.navlinks .nav-cta{text-align:center}
+ .hero{padding:76px 0 72px}.hero p{font-size:16px}
+ section{padding:68px 0}.section-head{display:block}.section-head p{margin-top:14px}
+ .service-grid,.portfolio-grid{grid-template-columns:1fr}
+ .photo{height:220px}
+ .steps{grid-template-columns:1fr 1fr;gap:24px 16px}
+ .about-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav>
-    <a class="logo" href="#top">
-      <img src="Logo.jpg" alt="Illusion logo">
-      <span class="company-name">藝如聲工作室 Illusion Studio</span>
-    </a>
-    <a class="btn" href="#contact">詢價</a>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="藝如聲工作室首頁">
+   <!-- 在這裡放入自己的 Logo：<img src="images/logo.png" alt="藝如聲工作室 Logo"> -->
+  </a>
+  <button class="menu-toggle" aria-label="開啟選單" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+  <nav class="navlinks">
+   <a href="#services">服務項目</a><a href="#portfolio">作品集</a><a href="#process">合作流程</a><a href="#about">關於我們</a>
+   <a class="nav-cta" href="#contact">聯絡詢價</a>
   </nav>
+ </div>
+</header>
+<main>
+ <section class="hero" id="home">
+  <div class="container hero-content">
+   <div class="eyebrow">ILLUSION STUDIO · DESIGN & PRINT</div>
+   <h1>讓每一個想法，<br><span>成為看得見的品牌。</span></h1>
+   <p>從品牌視覺、平面設計到印刷製作，為你的每一個創意找到最合適的呈現方式。用細節傳遞質感，讓設計真正走進生活。</p>
+   <div class="hero-actions"><a class="btn" href="#portfolio">探索設計作品</a><a class="btn-outline" href="#contact">開始討論專案</a></div>
+   <div class="hero-note">BRANDING　/　GRAPHIC DESIGN　/　PRINTING</div>
+  </div>
+ </section>
 
-  <header class="hero" id="top">
-    <div class="reg" aria-hidden="true"><b></b></div>
-    <h1>從設計到印刷，一次包完！</h1>
-    <p class="lead">名片、傳單、包裝盒等各類印刷品，由設計師親自設計，並協助打樣與印製，讓成品和螢幕上看到的一樣。</p>
-    <div class="btns">
-      <a class="btn" href="#services">查看服務項目</a>
-      <a class="btn ghost" href="#contact">直接詢價</a>
-    </div>
-  </header>
+ <section class="services" id="services">
+  <div class="container">
+   <div class="section-head"><div><div class="kicker">WHAT WE DO</div><h2>服務項目</h2></div><p>依照品牌需求提供完整設計服務，從概念發想到完稿印製，讓每個細節都恰到好處。</p></div>
+   <div class="service-grid">
+    <article class="service-card"><div class="photo"><img src="images/service-branding.jpg" alt="品牌識別設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>品牌識別設計</h3><p>Logo、品牌色彩、視覺規範與整體形象規劃。</p></div></article>
+    <article class="service-card"><div class="photo"><img src="images/service-business-card.jpg" alt="名片設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>名片與文宣設計</h3><p>名片、傳單、DM、摺頁與各式宣傳素材。</p></div></article>
+    <article class="service-card"><div class="photo"><img src="images/service-packaging.jpg" alt="產品包裝設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>產品包裝設計</h3><p>包裝盒、標籤、貼紙與產品系列視覺設計。</p></div></article>
+    <article class="service-card"><div class="photo"><img src="images/service-poster.jpg" alt="海報設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>海報與活動視覺</h3><p>活動主視覺、展場輸出、海報與社群宣傳圖。</p></div></article>
+    <article class="service-card"><div class="photo"><img src="images/service-social.jpg" alt="社群圖文設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>社群圖文設計</h3><p>貼文版型、廣告素材與社群整體視覺規劃。</p></div></article>
+    <article class="service-card"><div class="photo"><img src="images/service-layout.jpg" alt="型錄排版設計作品" onerror="this.style.display='none'"></div><div class="card-body"><h3>型錄與編排設計</h3><p>產品型錄、簡介、手冊與多頁文件編排。</p></div></article>
+   </div>
+  </div>
+ </section>
 
-  <section id="services">
-    <h2>服務項目</h2>
-    <p class="sub">每一項都包含設計與印刷。價格與規格為範例，請換成你的實際內容。</p>
-    <div class="grid">
-      <article class="card"><img class="service-photo" src="images/business-card.jpg" alt="名片設計與印刷作品">
-        <h3>名片設計與印刷</h3><p>搭配品牌風格設計，可選特殊紙材、燙金、軟膜等加工。</p>
-        <div class="spec"><span>設計費</span>NT$ 1,500 起</div></article>
-      <article class="card"><img class="service-photo" src="images/flyer-dm.jpg" alt="傳單與 DM 設計作品">
-        <h3>傳單與 DM</h3><p>單頁、雙面、三折頁，適合活動宣傳與店面發放。</p>
-        <div class="spec"><span>設計費</span>NT$ 2,500 起</div></article>
-      <article class="card"><img class="service-photo" src="images/packaging-box.jpg" alt="包裝盒設計作品">
-        <h3>包裝盒設計</h3><p>含刀模規劃與結構建議，從天地盒到飛機盒都能製作。</p>
-        <div class="spec"><span>設計費</span>NT$ 6,000 起</div></article>
-      <article class="card"><img class="service-photo" src="images/sticker-label.jpg" alt="貼紙與標籤設計作品">
-        <h3>貼紙與標籤</h3><p>產品標籤、封口貼、圓形與異形貼紙，可模切成型。</p>
-        <div class="spec"><span>設計費</span>NT$ 1,200 起</div></article>
-      <article class="card"><img class="service-photo" src="images/poster-display.jpg" alt="海報與展覽視覺作品">
-        <h3>海報與展覽視覺</h3><p>大尺寸輸出，適合活動、展覽與店面陳列。</p>
-        <div class="spec"><span>設計費</span>NT$ 3,500 起</div></article>
-      <article class="card"><img class="service-photo" src="images/catalog-book.jpg" alt="型錄與冊子設計作品">
-        <h3>型錄與冊子</h3><p>產品型錄、作品集、簡介冊，含排版與裝訂建議。</p>
-        <div class="spec"><span>設計費</span>NT$ 8,000 起</div></article>
-    </div>
-  </section>
+ <section class="portfolio" id="portfolio">
+  <div class="container">
+   <div class="section-head"><div><div class="kicker">SELECTED WORKS</div><h2>精選作品</h2></div><p>以下圖片位置已經設定完成。把自己的作品照片放進 images 資料夾，使用相同檔名即可顯示。</p></div>
+   <div class="portfolio-grid">
+    <div class="work" onclick="openLightbox(this)"><img src="images/portfolio-01.jpg" alt="品牌識別作品" onerror="this.style.display='none'"><div class="work-caption"><b>品牌識別設計</b><span>Brand Identity</span></div></div>
+    <div class="work" onclick="openLightbox(this)"><img src="images/portfolio-02.jpg" alt="包裝設計作品" onerror="this.style.display='none'"><div class="work-caption"><b>產品包裝設計</b><span>Packaging Design</span></div></div>
+    <div class="work" onclick="openLightbox(this)"><img src="images/portfolio-03.jpg" alt="平面文宣作品" onerror="this.style.display='none'"><div class="work-caption"><b>平面文宣設計</b><span>Graphic Design</span></div></div>
+    <div class="work" onclick="openLightbox(this)"><img src="images/portfolio-04.jpg" alt="活動海報作品" onerror="this.style.display='none'"><div class="work-caption"><b>活動海報視覺</b><span>Poster & Campaign</span></div></div>
+   </div>
+  </div>
+ </section>
 
-  <section id="process">
-    <h2>合作流程</h2>
-    <p class="sub">四個步驟，每一步都會先跟你確認再往下走。</p>
-    <ol class="steps">
-      <li><h3>討論需求</h3><p>了解用途、預算、數量與交期。</p></li>
-      <li><h3>設計提案</h3><p>提供初稿，可修改兩次。</p></li>
-      <li><h3>打樣確認</h3><p>實體或數位打樣，確認顏色與材質。</p></li>
-      <li><h3>印刷交件</h3><p>完成印製後寄送或自取。</p></li>
-    </ol>
-  </section>
+ <section class="process" id="process">
+  <div class="container">
+   <div class="section-head"><div><div class="kicker">HOW WE WORK</div><h2>合作流程</h2></div><p>清楚溝通、逐步確認，讓專案進行更有效率。</p></div>
+   <div class="steps">
+    <div class="step"><div class="step-num">01 / DISCOVER</div><h3>需求討論</h3><p>了解品牌定位、設計方向、預算與交期。</p></div>
+    <div class="step"><div class="step-num">02 / DESIGN</div><h3>設計提案</h3><p>依照需求發展視覺方向，提供設計初稿。</p></div>
+    <div class="step"><div class="step-num">03 / REFINE</div><h3>修改確認</h3><p>依照回饋調整細節，確認完稿內容。</p></div>
+    <div class="step"><div class="step-num">04 / DELIVER</div><h3>完稿交付</h3><p>整理輸出檔案，必要時協助打樣與印製。</p></div>
+   </div>
+  </div>
+ </section>
 
-  <section id="works">
-    <h2>作品集</h2>
-    <p class="sub">把你的實際作品照片放在這裡。</p>
-    <div class="works">
-      <div class="work">
-        <img src="images/portfolio-01.jpg" alt="作品集作品一">
-        <span class="work-caption">品牌與名片設計</span>
-      </div>
-      <div class="work">
-        <img src="images/portfolio-02.jpg" alt="作品集作品二">
-        <span class="work-caption">傳單與 DM 設計</span>
-      </div>
-      <div class="work">
-        <img src="images/portfolio-03.jpg" alt="作品集作品三">
-        <span class="work-caption">產品包裝設計</span>
-      </div>
-      <div class="work">
-        <img src="images/portfolio-04.jpg" alt="作品集作品四">
-        <span class="work-caption">海報視覺設計</span>
-      </div>
-    </div>
-  </section>
+ <section id="about">
+  <div class="container about-grid">
+   <div class="about-copy"><div class="kicker">ABOUT ILLUSION</div><h2>用設計，讓想像成真。</h2><p>藝如聲工作室 Illusion Studio，專注於平面設計、品牌視覺與印刷相關設計服務。重視創意、美感與實際應用，陪伴每個品牌把想法轉化成有質感的視覺作品。</p><p>無論是單一設計需求，或完整品牌專案，都歡迎與我們聊聊。</p></div>
+  </div>
+ </section>
 
-  <section id="faq">
-    <h2>常見問題</h2>
-    <details><summary>最少可以印多少數量？</summary><p>名片最少一盒（100 張），傳單與貼紙依規格而定，請詢價。</p></details>
-    <details><summary>需要多久時間？</summary><p>設計約 3 至 7 個工作天，印刷約 3 至 5 個工作天，包裝盒另需打樣時間。</p></details>
-    <details><summary>我已經有設計稿，可以只印刷嗎？</summary><p>可以，請提供 PDF 或 AI 檔，我會先檢查出血與色彩模式。</p></details>
-    <details><summary>可以寄送到外縣市嗎？</summary><p>可以，運費依地區與重量計算，也可自取。</p></details>
-  </section>
-
-  <section class="cta" id="contact">
-    <h2>告訴我你想印什麼</h2>
-    <p class="sub">提供品項、數量與期望交期，我會在一個工作天內回覆報價。</p>
-    <div class="btns">
-      <a class="btn" href="mailto:hello@example.com?subject=印刷設計詢價">寄信詢價</a>
-      <a class="btn ghost" href="#top">回到頂端</a>
-    </div>
-  </section>
-
-  <footer>© 2026 藝如聲工作室 All Rights Reserved.</footer>
-</div>
+ <section class="contact" id="contact">
+  <div class="container"><div class="kicker">LET'S CREATE SOMETHING</div><h2>準備好讓你的想法實現了嗎？</h2><p>告訴我們你的需求、預算與預計時程，一起討論最適合的設計方案。</p>
+   <a class="btn" href="mailto:hello@example.com?subject=藝如聲工作室設計詢價">聯絡我們・索取報價</a>
+  </div>
+ </section>
+</main>
+<footer><div class="container footer-row"><span>© 2026 藝如聲工作室 Illusion Studio</span><span>Design with imagination.</span></div></footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button aria-label="關閉">×</button><img id="lightbox-img" alt="作品放大預覽"></div>
+<script>
+function openLightbox(card){
+ const img=card.querySelector('img');
+ if(!img || !img.getAttribute('src') || img.style.display==='none') return;
+ document.getElementById('lightbox-img').src=img.src;
+ document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('show')));
+</script>
 </body>
 </html>
