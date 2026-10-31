@@ -19,8 +19,18 @@ img{max-width:100%;display:block}
 .container{width:min(var(--max),calc(100% - 44px));margin:auto}
 header{position:sticky;top:0;z-index:20;background:rgba(13,13,22,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;min-width:0;width:245px;min-height:76px}
-.brand img{width:100%;height:auto;max-height:76px;object-fit:contain}
+.brand {
+    display: flex;
+    align-items: center;
+    width: 245px;
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    max-height: 85px;
+    object-fit: contain;
+}
 .navlinks{display:flex;align-items:center;gap:26px;color:#ded9e8;font-size:14px}
 .navlinks a:hover{color:var(--gold)}
 .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;background:linear-gradient(110deg,#e4cd7b,#b78b50);color:#17131a;font-weight:800;transition:.2s}
@@ -106,9 +116,9 @@ footer{padding:28px 0;color:#898396;font-size:13px;border-top:1px solid var(--li
 <body>
 <header>
  <div class="container nav">
-  <a class="brand" href="#home" aria-label="藝如聲工作室首頁">
-  <img src="images/Logo-01.png" alt="包裝設計">
-  </a>
+  <a class="brand" href="#home">
+    <img src="images/Logo.jpg" alt="藝如聲工作室 Logo">
+</a>
   <button class="menu-toggle" aria-label="開啟選單" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
   <nav class="navlinks">
    <a href="#services">服務項目</a><a href="#portfolio">作品集</a><a href="#process">合作流程</a><a href="#about">關於我們</a>
