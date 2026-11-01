@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藝印視覺設計與專業印刷 | 名片、包裝盒、傳單 DM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f4f6fb',
+                            100: '#e5ebf5',
+                            500: '#3b62b9',
+                            600: '#2d4d94',
+                            900: '#1b2f59',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Microsoft JhengHei', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter & 標楷/黑體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1b2f59 0%, #2d4d94 50%, #3b62b9 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- 導航列 -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- 預留圖片區域：上方 Logo 圖片 -->
+                <div class="w-12 h-12 rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center overflow-hidden shrink-0 group-hover:border-brand-500 transition-colors" title="請在此替換您的 Logo 圖片，建議尺寸 120x120 px">
+                    <i class="fa-regular fa-image text-slate-400 text-base"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">藝印美學</span>
+                    <span class="block text-xs font-medium text-brand-500 tracking-widest uppercase">Design & Print</span>
+                </div>
+            </a>
+
+            <!-- 桌面版導航 -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#services" class="hover:text-brand-600 transition-colors">服務項目</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">精選作品</a>
+                <a href="#calculator" class="hover:text-brand-600 transition-colors">線上估價</a>
+                <a href="#about" class="hover:text-brand-600 transition-colors">關於我們</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-900 text-white hover:bg-brand-600 shadow-sm hover:shadow transition-all font-semibold">立即諮詢</a>
+            </nav>
+
+            <!-- 手機版選單按鈕 -->
+            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#services" class="block py-2 text-slate-700 font-medium mobile-link">服務項目</a>
+            <a href="#portfolio" class="block py-2 text-slate-700 font-medium mobile-link">精選作品</a>
+            <a href="#calculator" class="block py-2 text-slate-700 font-medium mobile-link">線上估價</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium mobile-link">關於我們</a>
+            <a href="#contact" class="block text-center py-3 rounded-xl bg-brand-900 text-white font-semibold mobile-link">立即諮詢</a>
+        </div>
+    </header>
+
+    <!-- Hero 區塊 -->
+    <section class="relative hero-gradient text-white pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- 裝飾背景圓圈 -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-400/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        專業平面設計 × 高端精緻印刷 一條龍服務
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        讓您的品牌質感，<br><span class="text-blue-200">在指尖與視線中驚艷綻放</span>
+                    </h1>
+                    <p class="text-lg text-blue-100 max-w-2xl mx-auto lg:mx-0 font-light">
+                        從質感名片、精美包裝盒到吸睛傳單 DM，我們結合美學設計與頂級印刷工藝，為您的企業打造無可比擬的視覺記憶點。
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-brand-900 font-bold hover:bg-blue-50 shadow-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator"></i> 快速線上估價
+                        </a>
+                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-transparent border-2 border-white/40 text-white font-semibold hover:bg-white/10 transition-all text-center">
+                            瀏覽精選作品
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 右側浮動展示圖卡 -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl p-6 glass-card text-slate-800 shadow-2xl space-y-4 border border-white/50">
+                            <!-- 預留圖片區域：Hero 展示卡片圖片 -->
+                            <div class="relative h-48 rounded-2xl bg-slate-200 overflow-hidden border-2 border-dashed border-slate-300 flex flex-col items-center justify-center group">
+                                <!-- 請替換或上傳您的圖片，建議尺寸 600x400 -->
+                                <i class="fa-regular fa-image text-4xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                                <span class="text-xs font-semibold text-slate-500">[ 預留圖片區：請在此放入精選包裝或名片照 ]</span>
+                                <span class="text-[10px] text-slate-400 mt-1">建議尺寸：600 x 400 px</span>
+                            </div>
+
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-xl bg-brand-900 text-white flex items-center justify-center text-xl font-bold">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-slate-900">客製化包裝盒</h3>
+                                        <p class="text-xs text-slate-500">燙金、局部上光、特殊刀模</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">熱門項目</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <span class="block text-xs text-slate-400">名片設計</span>
+                                    <span class="font-bold text-slate-800 text-sm">厚磅美術紙 / 導圓角</span>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <span class="block text-xs text-slate-400">傳單 DM</span>
+                                    <span class="font-bold text-slate-800 text-sm">雙面彩色 / 雙面霧P</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 flex items-center justify-between text-xs text-slate-500 font-medium">
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-check text-emerald-500"></i> 免費排版諮詢</span>
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-check text-emerald-500"></i> 全台快速配送</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務項目區塊 -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-500 font-bold text-sm tracking-widest uppercase">OUR SERVICES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">全方位設計與印刷解決方案</h2>
+                <p class="text-slate-600">從概念發想、視覺排版到精準印刷出廠，每一個環節都為您嚴格把關。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 服務 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-500/30 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-500 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">質感名片設計</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            名片是您的第一張臉。提供多款特殊紙張（棉絮卡、幻彩紙）、導圓角、擊凸、燙金等工藝。
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-600">起印量低 / 快速交件</span>
+                        <a href="#calculator" class="text-slate-400 group-hover:text-brand-600 transition-colors"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 服務 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-500/30 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-900 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">包裝盒 / 禮盒</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            專利刀模設計、彩盒、牛皮紙盒、精裝書盒。提升產品價值，讓開箱成為一種沉浸式體驗。
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-600">客製刀模 / 結構設計</span>
+                        <a href="#calculator" class="text-slate-400 group-hover:text-brand-600 transition-colors"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 服務 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-500/30 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">傳單 / DM / 海報</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            活動宣傳、餐廳菜單、企業DM。色彩飽和、版面清晰流暢，精準傳遞商業訊息。
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-600">多種尺寸 / 雙面加工</span>
+                        <a href="#calculator" class="text-slate-400 group-hover:text-brand-600 transition-colors"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 服務 4 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-500/30 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">品牌視覺 / LOGO</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            全方位品牌識別設計（VI）。從品牌標誌、標準字、色彩計畫到完整企業識別系統規範。
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-600">專屬設計師 / 完整版權</span>
+                        <a href="#calculator" class="text-slate-400 group-hover:text-brand-600 transition-colors"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集展示區塊 -->
+    <section id="portfolio" class="py-24 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brand-500 font-bold text-sm tracking-widest uppercase">PORTFOLIO</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">精選客戶與設計實績</h2>
+                </div>
+                <!-- 分類篩選按鈕 -->
+                <div class="flex flex-wrap gap-2" id="filter-btns">
+                    <button class="px-4 py-2 rounded-full text-sm font-semibold bg-brand-900 text-white shadow-sm filter-btn" data-filter="all">全部作品</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-semibold bg-white text-slate-600 hover:bg-slate-200 transition-colors filter-btn" data-filter="card">名片設計</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-semibold bg-white text-slate-600 hover:bg-slate-200 transition-colors filter-btn" data-filter="box">包裝盒</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-semibold bg-white text-slate-600 hover:bg-slate-200 transition-colors filter-btn" data-filter="flyer">傳單 DM</button>
+                </div>
+            </div>
+
+            <!-- 作品格子 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- 作品 1 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="box">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 1 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 1 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">包裝盒設計 / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">包裝盒設計</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">純淨之泉 頂級保養品禮盒</h3>
+                        <p class="text-slate-500 text-sm">採用特級白卡紙 + 局部上光 + 專用燙金工藝，凸顯品牌奢華質感。</p>
+                    </div>
+                </div>
+
+                <!-- 作品 2 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="card">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 2 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 2 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">名片設計 / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">名片設計</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">森山建築師事務所 雙面厚卡名片</h3>
+                        <p class="text-slate-500 text-sm">600磅厚卡美術紙，邊緣上黑邊，體現極簡穩重的專業形象。</p>
+                    </div>
+                </div>
+
+                <!-- 作品 3 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="flyer">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 3 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 3 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">傳單 DM / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">傳單 DM</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">漫步咖啡 週年慶雙面宣傳DM</h3>
+                        <p class="text-slate-500 text-sm">採用高磅銅版紙搭配霧面雙面局部上光，色彩鮮明且觸感細緻。</p>
+                    </div>
+                </div>
+
+                <!-- 作品 4 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="box">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 4 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 4 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">包裝盒 / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">包裝盒</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">山韻茗茶 職人手作茶葉禮盒</h3>
+                        <p class="text-slate-500 text-sm">牛皮紙底紋搭配燙古銅金，完美展現天然與東方美學的交融。</p>
+                    </div>
+                </div>
+
+                <!-- 作品 5 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="card">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 5 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 5 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">名片設計 / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">名片設計</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">拾光攝影 擊凸質感名片</h3>
+                        <p class="text-slate-500 text-sm">棉絮觸感紙張結合無墨擊凸工藝，摸得到立體浮雕線條。</p>
+                    </div>
+                </div>
+
+                <!-- 作品 6 -->
+                <div class="portfolio-item group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/60" data-category="flyer">
+                    <div class="h-64 bg-slate-100 relative overflow-hidden border-b border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                        <!-- 預留圖片區域：作品 6 -->
+                        <i class="fa-regular fa-image text-3xl text-slate-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-slate-600">[ 預留作品圖片 6 ]</span>
+                        <span class="text-[10px] text-slate-400 mt-1">傳單 DM / 建議 600x400</span>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium">傳單 DM</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">當代藝術雙年展 三折頁DM</h3>
+                        <p class="text-slate-500 text-sm">環保再生美術紙印刷，摺線精準耐折，兼具手感與環保理念。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 線上估價試算區塊 -->
+    <section id="calculator" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-2xl mb-10">
+                    <span class="text-brand-400 font-bold text-sm tracking-widest uppercase">ONLINE CALCULATOR</span>
+                    <h2 class="text-3xl font-extrabold mt-2">線上即時估價試算</h2>
+                    <p class="text-slate-400 text-sm mt-1">選取您的需求項目與數量，系統將為您預估參考價格（實際價格依完稿與特殊加工而定）。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 試算表單選項 -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">1. 選擇服務項目</label>
+                            <select id="calc-service" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500">
+                                <option value="card">質感名片印刷 (每盒 100 張)</option>
+                                <option value="box">客製包裝盒 / 彩盒</option>
+                                <option value="flyer">傳單 / DM 印刷</option>
+                                <option value="brand">品牌視覺整體設計</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">2. 材質或工藝規格</label>
+                            <select id="calc-spec" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500">
+                                <option value="standard">標準雙面霧P / 基本美術紙</option>
+                                <option value="luxury">特級厚卡 / 局部上光</option>
+                                <option value="premium">頂級燙金 / 擊凸 / 特殊刀模</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">3. 數量 / 份數</label>
+                            <input type="number" id="calc-qty" value="2" min="1" max="1000" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <!-- 計算結果顯示 -->
+                    <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-white border-b border-slate-700 pb-3">估價明細摘要</h3>
+                            <div class="flex justify-between text-sm text-slate-300">
+                                <span id="summary-item-name">名片印刷 (標準)</span>
+                                <span id="summary-unit-price" class="font-semibold text-white">NT$ 600 / 份</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-slate-300">
+                                <span>預估數量</span>
+                                <span id="summary-qty" class="font-semibold text-white">2 份</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-slate-300">
+                                <span>設計完稿服務</span>
+                                <span class="text-emerald-400 font-semibold">含基礎排版</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-6 border-t border-slate-700">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-sm text-slate-400">大約總金額 (未稅)</span>
+                                <span id="total-price" class="text-3xl font-extrabold text-white">NT$ 1,200</span>
+                            </div>
+                            <a href="#contact" class="block w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-center rounded-xl transition-colors shadow-lg">
+                                確認此價格，立即發送諮詢
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們區塊 -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-500 font-bold text-sm tracking-widest uppercase">ABOUT US</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">十年工藝堅持，只為成就您的品牌美學</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        我們是一支由資深平面設計師與頂尖印刷技師組成的專業團隊。深知好設計需要好工藝來完美呈現，因此我們堅持一條龍作業，從前端視覺溝通、紙張挑選到後端加工打樣，為客戶把關每一個細節。
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div class="border-l-4 border-brand-500 pl-4">
+                            <span class="block text-2xl font-extrabold text-slate-900">1,200+</span>
+                            <span class="text-sm text-slate-500 font-medium">成功服務企業品牌</span>
+                        </div>
+                        <div class="border-l-4 border-brand-500 pl-4">
+                            <span class="block text-2xl font-extrabold text-slate-900">99%</span>
+                            <span class="text-sm text-slate-500 font-medium">客戶滿意推薦率</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <!-- 預留圖片區域：關於我們 1 -->
+                            <div class="rounded-3xl shadow-md w-full h-64 bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fa-regular fa-image text-3xl text-slate-400 mb-2"></i>
+                                <span class="text-xs font-semibold text-slate-600">[ 預留圖片：工作室環境 ]</span>
+                                <span class="text-[10px] text-slate-400 mt-1">建議尺寸：400x500 px</span>
+                            </div>
+                            <div class="bg-brand-900 text-white p-6 rounded-3xl">
+                                <i class="fa-solid fa-medal text-3xl mb-2 text-brand-400"></i>
+                                <h4 class="font-bold text-lg">嚴選頂級紙材</h4>
+                                <p class="text-xs text-slate-300 mt-1">進口美術紙、環保回收紙應有盡有。</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-white p-6 rounded-3xl border border-slate-200/60 shadow-sm">
+                                <i class="fa-solid fa-bolt text-3xl mb-2 text-brand-500"></i>
+                                <h4 class="font-bold text-lg text-slate-900">高效交件速度</h4>
+                                <p class="text-xs text-slate-500 mt-1">高效率打樣與標準化出貨流程。</p>
+                            </div>
+                            <!-- 預留圖片區域：關於我們 2 -->
+                            <div class="rounded-3xl shadow-md w-full h-64 bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fa-regular fa-image text-3xl text-slate-400 mb-2"></i>
+                                <span class="text-xs font-semibold text-slate-600">[ 預留圖片：印刷廠房 ]</span>
+                                <span class="text-[10px] text-slate-400 mt-1">建議尺寸：400x500 px</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們與表單區塊 -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-500 font-bold text-sm tracking-widest uppercase">CONTACT US</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">立即與我們聊聊您的專案</h2>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            無論您是有明確的設計完稿檔案需要印刷，或是只有一個概念想做包裝盒與名片，歡迎隨時填寫表單或與我們聯繫！
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">諮詢專線</h3>
+                                <p class="text-slate-600 text-sm">(02) 2345-6789</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">電子信箱</h3>
+                                <p class="text-slate-600 text-sm">service@artprint-design.com.tw</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">工作室 / 展間</h3>
+                                <p class="text-slate-600 text-sm">台北市信義區設計路 88 號 3 樓</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 聯絡表單 -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-100">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">您的姓名 / 稱呼 *</label>
+                                <input type="text" required placeholder="例如：林先生 / 陳小姐" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">聯絡電話 *</label>
+                                <input type="tel" required placeholder="例如：0912-345678" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">電子信箱</label>
+                                <input type="email" placeholder="name@company.com" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">感興趣的服務項目</label>
+                                <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-500">
+                                    <option>質感名片設計與印刷</option>
+                                    <option>客製包裝盒 / 禮盒</option>
+                                    <option>宣傳傳單 / DM / 海報</option>
+                                    <option>品牌視覺設計 (VI)</option>
+                                    <option>其他綜合專案諮詢</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">需求描述 / 數量規格說明 *</label>
+                            <textarea rows="4" required placeholder="請簡單描述您的需求，例如尺寸、預計數量、是否有完稿檔案..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-900 hover:bg-brand-600 text-white font-bold rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> 送出諮詢表單
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 訊息提示彈窗 (替代 alert) -->
+    <div id="msg-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl text-center space-y-4">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900" id="modal-title">發送成功！</h3>
+            <p class="text-slate-600 text-sm" id="modal-desc">感謝您的諮詢，我們將會有專人於 1 個工作天內與您聯繫。</p>
+            <button id="modal-close" class="w-full py-3 bg-brand-900 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors">
+                確定
+            </button>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <!-- 預留圖片區域：頁尾 Logo 圖片 -->
+                <div class="w-10 h-10 rounded-lg bg-slate-800 border border-dashed border-slate-600 flex items-center justify-center overflow-hidden shrink-0" title="請在此替換您的 Logo 圖片">
+                    <i class="fa-regular fa-image text-slate-500 text-sm"></i>
+                </div>
+                <span class="text-white font-bold tracking-tight">藝印美學設計印刷</span>
+            </div>
+            <p class="text-xs text-slate-500 text-center md:text-left">
+                © 2026 ArtPrint & Design Co., Ltd. All Rights Reserved.
+            </p>
+            <div class="flex gap-4 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 互動與前端邏輯 -->
+    <script>
+        // 手機版選單切換
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 導航欄捲動陰影變化
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // 作品集分類篩選
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有按鈕樣式
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-900', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                // 加上當前按鈕樣式
+                btn.classList.remove('bg-white', 'text-slate-600');
+                btn.classList.add('bg-brand-900', 'text-white');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 線上估價試算邏輯
+        const calcService = document.getElementById('calc-service');
+        const calcSpec = document.getElementById('calc-spec');
+        const calcQty = document.getElementById('calc-qty');
+        const summaryItemName = document.getElementById('summary-item-name');
+        const summaryUnitPrice = document.getElementById('summary-unit-price');
+        const summaryQty = document.getElementById('summary-qty');
+        const totalPrice = document.getElementById('total-price');
+
+        function updateCalculator() {
+            const service = calcService.value;
+            const spec = calcSpec.value;
+            const qty = parseInt(calcQty.value) || 1;
+
+            let basePrice = 500;
+            let serviceName = "名片印刷";
+
+            if (service === 'card') {
+                serviceName = "質感名片印刷";
+                basePrice = spec === 'standard' ? 300 : spec === 'luxury' ? 500 : 800;
+            } else if (service === 'box') {
+                serviceName = "客製包裝盒";
+                basePrice = spec === 'standard' ? 1200 : spec === 'luxury' ? 1800 : 2500;
+            } else if (service === 'flyer') {
+                serviceName = "傳單 DM 印刷";
+                basePrice = spec === 'standard' ? 800 : spec === 'luxury' ? 1200 : 1600;
+            } else if (service === 'brand') {
+                serviceName = "品牌視覺設計";
+                basePrice = spec === 'standard' ? 15000 : spec === 'luxury' ? 25000 : 38000;
+            }
+
+            const total = basePrice * qty;
+
+            summaryItemName.textContent = `${serviceName} (${calcSpec.options[calcSpec.selectedIndex].text.split('/')[0]})`;
+            summaryUnitPrice.textContent = `NT$ ${basePrice.toLocaleString()} / 份`;
+            summaryQty.textContent = `${qty} 份`;
+            totalPrice.textContent = `NT$ ${total.toLocaleString()}`;
+        }
+
+        calcService.addEventListener('change', updateCalculator);
+        calcSpec.addEventListener('change', updateCalculator);
+        calcQty.addEventListener('input', updateCalculator);
+
+        // 表單送出彈窗處理
+        const contactForm = document.getElementById('contact-form');
+        const msgModal = document.getElementById('msg-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            msgModal.classList.remove('hidden');
+        });
+
+        modalClose.addEventListener('click', () => {
+            msgModal.classList.add('hidden');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
